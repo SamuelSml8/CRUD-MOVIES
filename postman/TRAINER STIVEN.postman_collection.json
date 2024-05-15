@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "cc06e300-2b0d-4707-be9f-f52c89ea478e",
+		"name": "TRAINER STIVEN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27402576",
+		"_collection_link": "https://universal-moon-68675.postman.co/workspace/MOVIES-API-Workspace~395dfa7c-bb59-4621-85aa-39f8ccd1010d/collection/27402576-cc06e300-2b0d-4707-be9f-f52c89ea478e?action=share&source=collection_link&creator=27402576"
+	},
+	"item": [
+		{
+			"name": "MOVIES CRUD",
+			"item": [
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3123/movies/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Get movie by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3123/movies/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Guardianes de la galaxia 2\",\r\n    \"description\": \"Un arbol triste\",\r\n    \"rating\": 5 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3123/movies/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Guardianes de la galaxia vol. 2\",\r\n    \"description\": \"Un arbol triste y un mapache deprimido\",\r\n    \"rating\": 5 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3123/movies/update/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3123/movies/delete/2"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

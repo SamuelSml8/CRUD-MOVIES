@@ -13,8 +13,17 @@ export class MoviesService {
     return this.moviesRepository.find();
   }
 
-  findById(id: number): Promise<Movie> {
-    return this.moviesRepository.findOneBy({ id });
+  async findById(id: number): Promise<Movie> {
+    const movieFound = await this.moviesRepository.findOneBy({ id });
+
+    if (!movieFound) {
+      throw new HttpException(
+        { ok: false, message: `Movie with ID ${id} not found`, data: null },
+        HttpStatus.NOT_FOUND,
+      );
+    }
+
+    return movieFound;
   }
 
   create(movie: Movie): Promise<Movie> {

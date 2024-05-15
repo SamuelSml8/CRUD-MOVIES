@@ -56,9 +56,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Postman collection
-
-
 ## License
 
 Nest is [MIT licensed](LICENSE).
